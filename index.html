@@ -23,9 +23,8 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#publications">Publications</a></li>
         <!--
-          Added a new navigation entry for the technical notes section.  This
-          points to the #technotes anchor defined further down the page.  When
-          adding new notes to the list you only need to modify script.js – the
+          Added a navigation entry for technical notes in PDF format. When adding
+          PDFs to your notes list you only need to modify script.js – the
           navigation link will automatically take you to this section.
         -->
         <li><a href="#technotes">Tech Notes</a></li>
@@ -95,18 +94,19 @@
 
     <!-- Tech Notes -->
     <!--
-      This section holds a list of technical notes or blog posts.  To add
+      This section lists your technical notes stored as PDF files. To add
       entries, edit the `notes` array in script.js with objects containing
-      a title and a URL pointing to your Markdown or HTML files.  When the
-      page loads, script.js will populate the list below.  You can change
-      the placeholder text or styling here if desired.
+      a title and a URL pointing to your PDF file (e.g. notes/my_note.pdf).
+      When the page loads, script.js will populate the list below. You can
+      customise the descriptive text here if desired.
     -->
     <section id="technotes" class="fade-in">
       <div class="container">
         <h2>Tech Notes</h2>
         <p>
-          Here I share a collection of technical notes and blog posts. Use the
-          <code>notes</code> array in <code>script.js</code> to manage your entries.
+          Here I share a collection of technical notes (PDFs). Use the
+          <code>notes</code> array in <code>script.js</code> to manage your entries. Each note
+          should point to a PDF in your repository.
         </p>
         <ul id="tech-notes-list" class="project-list"></ul>
       </div>

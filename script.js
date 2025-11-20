@@ -21,17 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -----------------------
-  // Tech notes list loader
+  // Tech notes (PDF) list loader
   //
   // Define your technical notes here. Each object should include a
-  // `title` and `url` property. The `url` can point to a Markdown file
-  // (which GitHub Pages will render automatically) or a pre-built HTML
-  // file. When new notes are added to this array, they will
-  // automatically appear in the Tech Notes section of your site.
+  // `title` and `url` property. The `url` should point to a PDF file in
+  // your repository (e.g. 'notes/my_note.pdf'). When new notes are added
+  // to this array, they will automatically appear in the Tech Notes
+  // section of your site.
   // Example:
-  // { title: 'Understanding Transformer KV‑cache', url: 'notes/kvcache.html' },
+  // { title: 'Understanding Transformer KV‑cache', url: 'notes/kvcache.pdf' },
   const notes = [
-    // { title: 'My first note', url: 'notes/example.html' },
+    // { title: 'Example PDF Note', url: 'notes/example.pdf' },
   ];
 
   const notesList = document.getElementById('tech-notes-list');
@@ -41,15 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const a = document.createElement('a');
       a.textContent = note.title;
       a.href = note.url;
-      // Open notes in a new tab to keep the main site context intact
+      // PDF links open in a new tab to keep the main site context intact
       a.target = '_blank';
       li.appendChild(a);
       notesList.appendChild(li);
     });
   } else if (notesList) {
-    // Provide a friendly placeholder when no notes are defined yet
+    // Friendly placeholder when no notes are defined yet
     const placeholder = document.createElement('li');
-    placeholder.textContent = 'No notes have been added yet. Edit the notes array in script.js to add your first entry.';
+    placeholder.textContent = 'No PDF notes have been added yet. Edit the notes array in script.js to add your first entry.';
     notesList.appendChild(placeholder);
   }
 });
