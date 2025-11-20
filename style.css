@@ -1,0 +1,179 @@
+/*
+ * Base styles for the minimalist personal website.
+ * The design uses two carefully chosen Google Fonts (DM Sans and Inter).
+ * Both fonts are available in numerous weights and include matching italics,
+ * which helps maintain visual hierarchy and readability across headings and
+ * body text【79832653490901†L40-L60】.
+ */
+
+/* Reset and global settings */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* Utility container to constrain content width */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header and navigation */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #0070f3;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.hero h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  background: #0070f3;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styles */
+section {
+  padding: 3rem 0;
+}
+
+section h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.item + .item {
+  margin-top: 2rem;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-list li {
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #f5f5f5;
+  font-size: 0.875rem;
+}
+
+/* Fade-in animation for sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e6e6e6;
+  }
+  header {
+    background: #121212;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  }
+  .nav-links li a {
+    color: #e6e6e6;
+  }
+  .nav-links li a:hover {
+    color: #90cdf4;
+  }
+  .hero {
+    background: #1e1e1e;
+  }
+  .btn {
+    background: #90cdf4;
+    color: #121212;
+  }
+  footer {
+    background: #1e1e1e;
+    color: #aaaaaa;
+  }
+}
