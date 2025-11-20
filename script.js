@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // to this array, they will automatically appear in the Tech Notes
   // section of your site.
   // Example:
-  // { title: 'Understanding Transformer KV‑cache', url: 'notes/kvcache.pdf' },
+  
   const notes = [
      { title: 'Note on Paged Attention', url: 'Paged Attention.pdf' },
   ];
