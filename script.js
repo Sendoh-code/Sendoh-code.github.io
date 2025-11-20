@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Example:
   // { title: 'Understanding Transformer KV‑cache', url: 'notes/kvcache.pdf' },
   const notes = [
-    // { title: 'Example PDF Note', url: 'notes/example.pdf' },
+     { title: 'Note on Paged Attention', url: 'Paged Attention.pdf' },
   ];
 
   const notesList = document.getElementById('tech-notes-list');
